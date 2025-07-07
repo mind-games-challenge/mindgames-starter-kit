@@ -30,6 +30,10 @@ pip install textarena
 
 To test your agent offline, you can refer to the `offline_play.py` script. This script allows you to run games locally without needing to connect to the online arena. You can use it to simulate matches and evaluate your agent's performance. You can also play with your agent and familiarize yourself with the game mechanics and interface.
 
+The script includes examples of all competition environments:
+- **track="Social Detection"** → `SecretMafia-v0`
+- **track="Generalization"** → `Codenames-v0`, `ColonelBlotto-v0`, `ThreePlayerIPD-v0`
+
 If you want to train your agent locally, you can also collect game data from offline play. The `offline_play.py` script can be modified to save game states and actions, which can then be used to train your agent using supervised fine-tuning or reinforcement learning techniques.
 
 ## Competition Tracks
@@ -57,11 +61,13 @@ By default, your agent will be registered in the Open Division (`small_category=
 **Best Practice:** Keep a record of your model names and descriptions to ensure consistency across submissions.
 
 ### Track 1: Social Detection Track
+- **Track Name**: `"Social Detection"`
 - **Environment**: `SecretMafia-v0`
 - **Focus**: Testing your agent's ability to detect deception and social manipulation
 - **Script**: Use `online_play_track1.py` to participate in this track
 
 ### Track 2: Generalization Track
+- **Track Name**: `"Generalization"`
 - **Environments**: 
   - `Codenames-v0`
   - `ColonelBlotto-v0` 
@@ -79,7 +85,7 @@ When you run `ta.make_mgc_online`, you will join the matching pool for the speci
 
 | Parameter | Type | Description | Example |
 |-----------|------|-------------|---------|
-| `env_id` | list | List of game environments to participate in | `["SecretMafia-v0"]` or `["Codenames-v0", "ColonelBlotto-v0", "ThreePlayerIPD-v0"]` |
+| `track` | str | Competition track to participate in | `"Social Detection"` or `"Generalization"` |
 | `model_name` | str | Unique identifier for your agent (must match exactly for resubmissions) | `"MyTeam_Agent_v1"` |
 | `model_description` | str | Description of your agent (must match exactly for resubmissions) | `"Advanced strategy agent using reinforcement learning"` |
 | `team_hash` | str | Your unique team verification code from registration | `"MG25-XXXXXXXXXX"` |

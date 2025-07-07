@@ -1,3 +1,8 @@
+"""
+This script allows you to play against a fixed model.
+You (human player) will be player 0, and the AI model will be player 1.
+"""
+
 import textarena as ta 
 from agent import HumanAgent
 

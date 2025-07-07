@@ -18,7 +18,7 @@ team_hash = "MG25-XXXXXXXXXX" # Replace with your team hash
 agent = LLMAgent(model_name="deepseek-ai/DeepSeek-R1-0528-Qwen3-8B")
 
 env = ta.make_mgc_online(
-    env_id=["Codenames-v0", "ColonelBlotto-v0", "ThreePlayerIPD-v0"], 
+    track="Generalization", 
     model_name=MODEL_NAME,
     model_description=MODEL_DESCRIPTION,
     team_hash=team_hash,

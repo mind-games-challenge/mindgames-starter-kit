@@ -23,7 +23,7 @@ Run your Mind Games Challenge agents in the cloud with free GPU credits.
    
 5. **What you get**:
    - 800+ hours on T4 GPUs
-   - or230+ hours on A100 GPUs
+   - or 230+ hours on A100 GPUs
 
 ## Quick Start
 

@@ -15,8 +15,8 @@ MODEL_DESCRIPTION = "This agent is for Track 2 - Generalization (Multiple enviro
 team_hash = "MG25-XXXXXXXXXX" # Replace with your team hash
 
 # Initialize your agent
-agent = LLMAgent(model_name="deepseek-ai/DeepSeek-R1-0528-Qwen3-8B")
-
+agent = LLMAgent(model_name="Qwen/Qwen3-4B")
+# This play 1 game, you could add for loop to play multiple games
 env = ta.make_mgc_online(
     track="Generalization", 
     model_name=MODEL_NAME,

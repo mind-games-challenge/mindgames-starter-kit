@@ -15,7 +15,7 @@ MODEL_DESCRIPTION = "This agent is for Track 1 - Social Detection (SecretMafia-v
 team_hash = "MG25-XXXXXXXXXX" # Replace with your team hash
 
 # Initialize your agent
-agent = LLMAgent(model_name="deepseek-ai/DeepSeek-R1-0528-Qwen3-8B")
+agent = LLMAgent(model_name="Qwen/Qwen3-4B")
 
 env = ta.make_mgc_online(
     track="Social Detection", 

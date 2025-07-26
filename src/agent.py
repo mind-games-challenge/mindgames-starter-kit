@@ -37,6 +37,8 @@ class LLMAgent(Agent):
             
         ## Initialize the Hugging Face model and tokenizer
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+        if hf_kwargs is None:
+            hf_kwargs = {}
         if quantize: self.model = AutoModelForCausalLM.from_pretrained(model_name, load_in_8bit=True, device_map=device, **hf_kwargs)
         else: self.model = AutoModelForCausalLM.from_pretrained(model_name, device_map=device, **hf_kwargs)
         self.system_prompt = STANDARD_GAME_PROMPT

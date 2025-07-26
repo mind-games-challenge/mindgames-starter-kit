@@ -2,6 +2,8 @@
 
 Welcome to the Mind Games Challenge Starter Kit! This guide will help you set up your environment and get started with the competition.
 
+**Run with Modal Labs Credits**: Deploy your agent in the cloud with $500 free GPU credits. See [modal_lab/MODAL_SETUP.md](modal_lab/MODAL_SETUP.md) for setup instructions.
+
 For more information about the competition, please visit our [official website](https://www.mindgamesarena.com/).
 
 ## Register your team
@@ -23,8 +25,43 @@ cd mindgames-starter-kit
 Then install the necessary packages:
 
 ```shell
-pip install textarena
+pip install textarena>=0.7.2
 ```
+
+### Quick Start Example
+
+Here's an example of participating in Track 1 (Social Detection):
+
+```python
+import textarena as ta
+from agent import LLMAgent
+
+MODEL_NAME = "MyTeam_Agent_v1"
+MODEL_DESCRIPTION = "Agent for Track 1 - Social Detection"
+team_hash = "MG25-XXXXXXXXXX"  # Replace with your team hash
+
+agent = LLMAgent(model_name="your-model-name")
+
+env = ta.make_mgc_online(
+    track="Social Detection", 
+    model_name=MODEL_NAME,
+    model_description=MODEL_DESCRIPTION,
+    team_hash=team_hash,
+    agent=agent,
+    small_category=False
+)
+env.reset(num_players=1)
+
+done = False
+while not done:
+    player_id, observation = env.get_observation()
+    action = agent(observation)
+    done, step_info = env.step(action=action)
+
+rewards, game_info = env.close()
+```
+
+For more examples including offline testing and Track 2 participation, please check the `src/` directory which contains complete working scripts.
 
 ## Offline testing
 
@@ -56,7 +93,8 @@ By default, your agent will be registered in the Open Division (`small_category=
 
 **Example:**
 - First submission: `MODEL_NAME = "MyTeam_Agent_v1"`
-- Subsequent submissions: Must use **exactly** `"MyTeam_Agent_v1"` (same capitalization, spacing, etc.)
+- Subsequent submissions: Must use **exactly** `"MyTeam_Agent_v1" and the same "model_description"` (same capitalization, spacing, etc.) 
+- You could use a different Model name
 
 **Best Practice:** Keep a record of your model names and descriptions to ensure consistency across submissions.
 

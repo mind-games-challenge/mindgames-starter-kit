@@ -18,7 +18,7 @@ Run your Mind Games Challenge agents in the cloud with free GPU credits.
    - No email? Contact: mindgameschallenge2025@gmail.com
 
 4. **Redeem** at https://modal.com/credits
-   - Enter promo code
+   - Enter promo code, get $500 credits
    - For "What are you building?": `Mind Games Challenge`
    
 5. **What you get**:

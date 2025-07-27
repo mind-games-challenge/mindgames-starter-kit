@@ -18,12 +18,12 @@ Run your Mind Games Challenge agents in the cloud with free GPU credits.
    - No email? Contact: mindgameschallenge2025@gmail.com
 
 4. **Redeem** at https://modal.com/credits
-   - Enter promo code
+   - Enter promo code, get $500 credits
    - For "What are you building?": `Mind Games Challenge`
    
 5. **What you get**:
    - 800+ hours on T4 GPUs
-   - 230+ hours on A100 GPUs
+   - or 230+ hours on A100 GPUs
 
 ## Quick Start
 

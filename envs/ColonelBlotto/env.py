@@ -152,7 +152,10 @@ class ColonelBlottoEnv(ta.Env):
             elif scores[1] > scores[0]: self.state.set_winner(player_id=1, reason=f"Commander Beta wins {scores[1]}-{scores[0]} after {self.num_rounds} rounds!")
             else:                       self.state.set_draw(reason=f"Game ends in a {scores[0]}-{scores[1]} tie after {self.num_rounds} rounds!")
             return
-        
+    
+        remaining_rounds = self.num_rounds - current_round
+        if scores[0]>remaining_rounds+scores[1]: self.state.set_winner(player_id=0, reason=f"Commander Alpha wins {scores[0]}-{scores[1]} (majority achieved)!")
+        elif scores[1]>remaining_rounds+scores[0]: self.state.set_winner(player_id=1, reason=f"Commander Beta wins {scores[1]}-{scores[0]} (majority achieved)!")
         # Check for early victory (majority of possible rounds)
         rounds_needed_to_win = (self.num_rounds // 2) + 1
         if scores[0] >= rounds_needed_to_win:   self.state.set_winner(player_id=0, reason=f"Commander Alpha wins {scores[0]}-{scores[1]} (majority achieved)!")

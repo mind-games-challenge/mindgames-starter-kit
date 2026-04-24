@@ -7,9 +7,6 @@
 [submodule "submissions/generalization/stars"]
 	path = submissions/generalization/stars
 	url = https://github.com/ReverseFelicity/mindgames-stars.git
-[submodule "submissions/social_deduction/jarvis"]
-	path = submissions/social_deduction/jarvis
-	url = https://github.com/StarAtNyte/MindGames.git
 [submodule "submissions/social_deduction/tungsten"]
 	path = submissions/social_deduction/tungsten
 	url = https://github.com/mossbanay/secret-mafia-agent.git
@@ -19,3 +16,6 @@
 [submodule "submissions/social_deduction/phoebus"]
 	path = submissions/social_deduction/phoebus
 	url = https://github.com/mihiraryaa/social_detection-mindgames.git
+[submodule "submissions/social_deduction/odyssean"]
+	path = submissions/social_deduction/odyssean
+	url = https://github.com/Yinita/mindgames_agent.git

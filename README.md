@@ -108,22 +108,24 @@ git submodule update --init --recursive
 
 Model weights are **not** vendored — the HF paths below are listed for download via `huggingface-cli download <repo>` (or the repo's own install script).
 
+Rankings and TrueSkill values below are from the **Stage II Efficient division** (per the competition report, Table 2 and Appendix C).
+
 ### Generalization Track
 
-| Rank | Team | TrueSkill | Submodule | Hugging Face / Model |
-|------|------|-----------|-----------|----------------------|
-| 1 | In2AI | 32.38 | [submissions/generalization/in2ai](submissions/generalization/in2ai) | [`AlekseyKorshuk/mindgames-in2ai-submission`](https://huggingface.co/AlekseyKorshuk/mindgames-in2ai-submission) |
-| 2 | RLGaming | 31.48 | [submissions/generalization/rlgaming](submissions/generalization/rlgaming) | [`DanDanStonks/RLG-Generalization-Small`](https://huggingface.co/DanDanStonks/RLG-Generalization-Small) |
-| 3 | STARS | 30.50 | [submissions/generalization/stars](submissions/generalization/stars) | Ollama `qwen3:8b` (base model, no fine-tune) — `ollama pull qwen3:8b` |
+| Rank | Team | Model | TS (Final Score) | Submodule | Hugging Face / Model |
+|------|------|-------|:----------------:|-----------|----------------------|
+| 1 | In2AI    | `In2AI_model`           | **34.2** | [submissions/generalization/in2ai](submissions/generalization/in2ai)       | RL-finetuned Qwen3-8B — [`AlekseyKorshuk/mindgames-in2ai-submission`](https://huggingface.co/AlekseyKorshuk/mindgames-in2ai-submission) (served via SGLang) |
+| 2 | STARS    | `STARS Agent Track2 V7` | **26.8** | [submissions/generalization/stars](submissions/generalization/stars)       | Ollama `qwen3:8b` (base, code-augmented reasoning — no fine-tune). `ollama pull qwen3:8b` |
+| 3 | RLGaming | `RLG-Model8B-Ver12`     | **25.8** | [submissions/generalization/rlgaming](submissions/generalization/rlgaming) | Base [`meta-llama/Llama-3.1-8B-Instruct`](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct) + LoRA [`DanDanStonks/RLG-Generalization-Small`](https://huggingface.co/DanDanStonks/RLG-Generalization-Small) |
 
 ### Social Detection Track
 
-| Rank | Team | TrueSkill | Submodule | Hugging Face / Model |
-|------|------|-----------|-----------|----------------------|
-| 1 | JARVIS | 26.01 | [submissions/social_deduction/jarvis](submissions/social_deduction/jarvis) | [`Qwen/Qwen3-8B`](https://huggingface.co/Qwen/Qwen3-8B) (base, 4-bit local / 8-bit Modal) |
-| 2 | tungsten | 24.22 | [submissions/social_deduction/tungsten](submissions/social_deduction/tungsten) | [`Qwen/Qwen3-8B`](https://huggingface.co/Qwen/Qwen3-8B) (served via vLLM + LiteLLM) |
-| 3 | RLGaming | 8.86 | [submissions/social_deduction/rlgaming](submissions/social_deduction/rlgaming) | [`popo9790/Qwen3-8B-Mafia-v2`](https://huggingface.co/popo9790/Qwen3-8B-Mafia-v2) |
-| 4 | Phoebus | 4.13 | [submissions/social_deduction/phoebus](submissions/social_deduction/phoebus) | Base [`Qwen/Qwen3-8B`](https://huggingface.co/Qwen/Qwen3-8B) + LoRA adapters [`mihirArya/qwafia_10`](https://huggingface.co/mihirArya/qwafia_10) (reviewer) and [`mihirArya/qwafiaB_10`](https://huggingface.co/mihirArya/qwafiaB_10) (executor) |
+| Rank | Team | Model | TS (Stage II) | Submodule | Hugging Face / Model |
+|------|------|-------|:-------------:|-----------|----------------------|
+| 1 | RLGaming | `RLGame-ts-v7`        | **27.2 ± 2.8** | [submissions/social_deduction/rlgaming](submissions/social_deduction/rlgaming) | [`popo9790/Qwen3-8B-Mafia-v2`](https://huggingface.co/popo9790/Qwen3-8B-Mafia-v2) |
+| 2 | tungsten | `tungsten_social_v2`  | **23.8 ± 2.8** | [submissions/social_deduction/tungsten](submissions/social_deduction/tungsten) | [`Qwen/Qwen3-8B`](https://huggingface.co/Qwen/Qwen3-8B) (served via vLLM + LiteLLM) |
+| 3 | Odyssean | `Odyssean_Social2`    | **18.4 ± 2.9** | [submissions/social_deduction/odyssean](submissions/social_deduction/odyssean) | SFT Qwen-8B — [`yinita/mg-8b-cot-sft-general-1024`](https://huggingface.co/yinita/mg-8b-cot-sft-general-1024) (shared checkpoint with generalization; differentiation is prompt-based, auto-detected per observation) |
+| 4 | Phoebus  | `Revac-online`        | **12.5 ± 2.8** | [submissions/social_deduction/phoebus](submissions/social_deduction/phoebus) | Base [`Qwen/Qwen3-8B`](https://huggingface.co/Qwen/Qwen3-8B) + LoRA adapters [`mihirArya/qwafia_10`](https://huggingface.co/mihirArya/qwafia_10) (reviewer) and [`mihirArya/qwafiaB_10`](https://huggingface.co/mihirArya/qwafiaB_10) (executor) |
 
 ## Acknowledgement
 

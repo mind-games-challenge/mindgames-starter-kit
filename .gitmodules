@@ -1,0 +1,21 @@
+[submodule "submissions/generalization/in2ai"]
+	path = submissions/generalization/in2ai
+	url = https://github.com/AlekseyKorshuk/mindgames-in2ai-submission.git
+[submodule "submissions/generalization/rlgaming"]
+	path = submissions/generalization/rlgaming
+	url = https://github.com/rlglab/RLGaming-generalization-track-submission.git
+[submodule "submissions/generalization/stars"]
+	path = submissions/generalization/stars
+	url = https://github.com/ReverseFelicity/mindgames-stars.git
+[submodule "submissions/social_deduction/jarvis"]
+	path = submissions/social_deduction/jarvis
+	url = https://github.com/StarAtNyte/MindGames.git
+[submodule "submissions/social_deduction/tungsten"]
+	path = submissions/social_deduction/tungsten
+	url = https://github.com/mossbanay/secret-mafia-agent.git
+[submodule "submissions/social_deduction/rlgaming"]
+	path = submissions/social_deduction/rlgaming
+	url = https://github.com/popo9790/NeurIPS-Mafia-small_model.git
+[submodule "submissions/social_deduction/phoebus"]
+	path = submissions/social_deduction/phoebus
+	url = https://github.com/mihiraryaa/social_detection-mindgames.git

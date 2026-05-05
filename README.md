@@ -130,3 +130,5 @@ Rankings and TrueSkill values below are from the **Stage II Efficient division**
 ## Acknowledgement
 
 We special thanks to the [TextArena](https://www.textarena.ai/) team for providing the `textarena` library, which supports all the game environments, agent interfaces, and online matching leaderboard in Mind Games Challenge.
+
+## LicenseThis starter kit is released under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)**, unless otherwise noted.You are free to share, copy, redistribute, remix, transform, and build upon the materials for any purpose, provided that appropriate credit is given.Please note that third-party dependencies, reference submissions, submodules, and external model weights may be governed by their own licenses. Users should check the corresponding repository, package, or Hugging Face model page before use. Please note that third-party dependencies, reference submissions, submodules, external model weights, and checkpoints provided by participating teams may be governed by their own licenses. Users should check the corresponding repository, package, or Hugging Face model page before use.

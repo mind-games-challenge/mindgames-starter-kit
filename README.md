@@ -2,11 +2,11 @@
 
 Welcome to the Mind Games Challenge Starter Kit! This guide will help you set up your environment and test your agent **offline** against the top reference submissions.
 
-**Run with Modal Labs Credits**: Deploy your agent in the cloud with $500 free GPU credits. See [modal_lab/MODAL_SETUP.md](modal_lab/MODAL_SETUP.md) for setup instructions.
-
 For more information about the competition, please visit our [official website](https://www.mindgamesarena.com/).
 
 > 🚧 **Online competition is currently closed.** When it reopens we will update the instructions here on GitHub — watch this repo for changes. For now, use the **offline workflow** below.
+> **Run with Modal Labs Credits**: Deploy your agent in the cloud with $500 free GPU credits. See [modal_lab/MODAL_SETUP.md](modal_lab/MODAL_SETUP.md) for setup instructions. (This is currently experienced, and once the online competition reopens, we will update)
+
 
 ## 📌 Reference Models & Release Roadmap
 
@@ -14,7 +14,7 @@ For more information about the competition, please visit our [official website](
 
 ### TODO
 
-- [ ] **April 2026 release** — top-performance method check: verify each reference agent runs end-to-end locally against its documented install recipe (uv / conda / vllm / ollama) and reproduces its reported TrueSkill in offline play.
+- [x] **April 2026 release** — top-performance method check: verify each reference agent runs end-to-end locally against its documented install recipe (uv / conda / vllm / ollama) and reproduces its reported TrueSkill in offline play.
 - [ ] **May 2026 release** — publish evaluation scripts that automate head-to-head matches against every reference model in this kit, aggregate results, and print a per-environment scorecard.
 
 ## Installation
